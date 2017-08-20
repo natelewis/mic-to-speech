@@ -2,7 +2,7 @@
   "name": "mic-to-speech",
   "version": "0.0.1",
   "private": true,
-  "license": "Apache Version 2.0",
+  "license": "Apache-2.0",
   "author": "Nate Lewis",
   "scripts": {
     "lint": "eslint \"**/*.js\" --fix; true"
@@ -17,5 +17,23 @@
   },
   "engines": {
     "node": "7"
-  }
+  },
+  "description": "Watches your microphone stream to pull out speech segments that you can save to a file, or send to an endpoint for speech recognition.  Ideal for saving audio for conversation monitoring and assistant apps that work like Google Home or Amazon Alexa.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natelewis/mic-to-speech.git"
+  },
+  "keywords": [
+    "speech recognition",
+    "speech",
+    "microphone"
+  ],
+  "bugs": {
+    "url": "https://github.com/natelewis/mic-to-speech/issues"
+  },
+  "homepage": "https://github.com/natelewis/mic-to-speech#readme"
 }

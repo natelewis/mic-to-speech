@@ -1,7 +1,7 @@
 {
   "name": "mic-to-speech",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "license": "Apache-2.0",
   "author": "Nate Lewis",
   "scripts": {

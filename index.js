@@ -60,12 +60,17 @@ class SpeechExtractor extends EventEmitter {
     let devNull = new DevNullStream();
     self.micInputStream.pipe(devNull);
 
-    // speeking action
+    // speaking action
     self.micInputStream.on('speaking', function(buffer) {
-      // append to the buffer of active speech
-      self.appendToActiveSpeechBuffer(buffer);
-      self.micInstance.incementSpeakingCount();
-      self.micInstance.silenceCount = 0;
+      // stay clean if we are paused
+      if (self.micInstance.isPaused()) {
+        self.resetCounters();
+      } else {
+        // append to the buffer of active speech
+        self.appendToActiveSpeechBuffer(buffer);
+        self.micInstance.incementSpeakingCount();
+        self.micInstance.silenceCount = 0;
+      }
     });
 
     // silence action

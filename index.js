@@ -27,6 +27,7 @@ class SpeechExtractor extends EventEmitter {
    * @param       {Object} options
    * @param       {number} options.sampleRateHertz - Sample rate (default 16000)
    * @param       {number} options.channels - Mic channels (default 1)
+   * @param       {string} options.device - Device of the mic (Only relevant for use with linux)
    * @constructor
    */
   constructor(options) {
@@ -51,7 +52,7 @@ class SpeechExtractor extends EventEmitter {
     let micSettings = {
       rate: options.sampleRateHertz,
       channels: options.channels,
-      debug: options.debug,
+      device: options.device
     };
 
     // setup the mic streams

@@ -4,6 +4,11 @@ Watches your microphone stream to pull out speech segments that you can save to 
 
 Supports Mac, Windows, Linux and Raspberry Pi.  
 
+## Dependencies
+
+* Linux: ALSA tools installed on the machine (sudo apt-get install alsa-utils)
+* Window/OSX: SoX Tools installed on the machine
+
 ## Usage
 
 ```javascript

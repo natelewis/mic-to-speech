@@ -46,7 +46,7 @@ micToSpeech.on('speech', function(rawAudio) {
         console.log('saved: ' + filename);
         micToSpeech.resume();
     });
-};
+});
 
 micToSpeech.start();
 console.log('Listening for speech');
